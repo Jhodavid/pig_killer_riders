@@ -1,0 +1,42 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "pig-killer-riders",
+          "appId": "1:593462834623:android:762b7666d52ad703289d0a",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "pig-killer-riders",
+          "appId": "1:593462834623:ios:75408261f4e5af1a289d0a",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "pig-killer-riders",
+          "configurations": {
+            "android": "1:593462834623:android:762b7666d52ad703289d0a",
+            "ios": "1:593462834623:ios:75408261f4e5af1a289d0a",
+            "web": "1:593462834623:web:48fe04bfd11bf8d3289d0a"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-central1"
+    }
+  }
+}

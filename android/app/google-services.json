@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "593462834623",
+    "project_id": "pig-killer-riders",
+    "storage_bucket": "pig-killer-riders.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:593462834623:android:762b7666d52ad703289d0a",
+        "android_client_info": {
+          "package_name": "com.example.pig_killer_riders"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7aGL6muoaASrP9Gck5WUfhiSNZI4B_fU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
