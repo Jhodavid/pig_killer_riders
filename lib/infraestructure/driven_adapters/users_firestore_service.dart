@@ -9,9 +9,16 @@ class UsersFirestoreService extends UsersGateway {
   UsersFirestoreService() : firestoreService = FirestoreService();
 
   @override
-  Future<(ErrorModel?, UserModel)> createUser(UserModel user) {
-    // TODO: implement createUser
-    throw UnimplementedError();
+  Future<(ErrorModel?, UserModel)> createUser(UserModel user) async {
+    try {
+      final userMap = user.toMap();
+      final membersCollection = firestoreService.db.collection('Members');
+
+      final docRef = await membersCollection.add({'users': [userMap]});
+      return (null, user.copyWith(id: docRef.id));
+    } catch (e) {
+      return (ErrorModel(name: e.toString()), user);
+    }
   }
 
   @override
@@ -29,8 +36,6 @@ class UsersFirestoreService extends UsersGateway {
       final doc = snapshot.docs.first;
       final List<UserModel> allUsers = allUsersMap.map(
         (userMap) => UserModel.fromMap(userMap, doc.id)).toList();
-
-      print(allUsers);
 
       return (null, allUsers);
     } catch(e) {

@@ -14,6 +14,20 @@ class UserModel {
     required this.payments,
   });
 
+  UserModel copyWith({
+    String? id,
+    String? fullName,
+    String? integrationMon,
+    List<PaymentModel>? payments,
+  }) {
+    return UserModel(
+      id: id ?? this.id,
+      fullName: fullName ?? this.fullName,
+      integrationMon: integrationMon ?? this.integrationMon,
+      payments: payments ?? this.payments,
+    );
+  }
+
   factory UserModel.fromMap(Map<String, dynamic> map, String documentId) {
     return UserModel(
       id: documentId,
@@ -23,5 +37,14 @@ class UserModel {
         .map((e) => PaymentModel.fromMap(e as Map<String, dynamic>))
         .toList(),
     );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'fullName': fullName,
+      'integrationMon': integrationMon,
+      'payments': payments.map((p) => p.toMap()).toList(),
+    };
   }
 }

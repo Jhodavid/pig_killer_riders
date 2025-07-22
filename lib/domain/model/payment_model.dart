@@ -14,4 +14,11 @@ class PaymentModel {
       proofPaymentLink: map['proofPaymentLink'] ?? '',
     );
   }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'dates': dates,
+      'proofPaymentLink': proofPaymentLink,
+    };
+  }
 }
