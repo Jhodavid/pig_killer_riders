@@ -29,18 +29,20 @@ class Home extends StatelessWidget {
             ),
             Image.asset('assets/logo.jpg'),
 
-            Padding(
-              padding: EdgeInsets.only(top: 20, bottom: 40),
-              child: Text(
-                'Bienvenido, estamos trabajando en tener nuestro espacio en la web pronto. 🤩',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
+            Center(
+              child: Padding(
+                padding: EdgeInsets.only(top: 20, bottom: 40),
+                child: Text(
+                  'Bienvenido, estamos trabajando en tener nuestro espacio en la web pronto. 🤩',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
                 ),
               ),
             ),
 
-            TextButton(
+            OutlinedButton(
               onPressed:
                 () => context.pushNamed(AccountStatements.route),
               child: Text('Ir a estados de cuentas', style: TextStyle(color: Colors.white),))
