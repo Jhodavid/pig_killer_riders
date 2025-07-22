@@ -34,6 +34,7 @@ class Home extends StatelessWidget {
                 padding: EdgeInsets.only(top: 20, bottom: 40),
                 child: Text(
                   'Bienvenido, estamos trabajando en tener nuestro espacio en la web pronto. 🤩',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 18,
