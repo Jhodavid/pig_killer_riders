@@ -28,7 +28,7 @@ class _AccountStatementsState extends State<AccountStatements> {
         future: usersUseCase.getUsers(),
         builder: (context, snapshot) {
           if(snapshot.hasError || snapshot.data == null) {
-            return Text('Error en data del Future');
+            return Center(child: CircularProgressIndicator(color: Colors.white,),);
           }
 
           if(!snapshot.hasData) {
