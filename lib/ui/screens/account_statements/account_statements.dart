@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pig_killer_riders/domain/domain.dart';
 import 'package:pig_killer_riders/infraestructure/driven_adapters/users_firestore_service.dart';
-import 'package:url_launcher/url_launcher.dart';
-
-import '../../../infraestructure/mock/mock_data.dart';
 
 class AccountStatements extends StatefulWidget {
+  static const String name = 'Estados de cuenta';
   static const String route = '/account-statements';
 
   const AccountStatements({super.key});
